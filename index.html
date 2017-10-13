@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" charset="UTF-8">
+	<title>Lenyűgöző</title>
+	
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin-ext');
+		html, body {
+			height: 100%;
+			overflow: hidden;
+			margin: 0;
+			color: white;
+			font-family: 'Roboto Condensed';
+			font-size: 40px;
+		}
+		.hatter {
+		background-image: url("hatter2.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		}
+		.pirosvonal{
+			border: 1px solid red;
+		}
+		.szovegkozepre{
+			text-align: center;
+		}
+		.fuggkozepre{
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+		.viszkozepre{
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+			margin-right: -50%;
+		}
+		.tokkozepre{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-right: -50%;
+		}
+		.fejlec{
+			font-family: Arial;
+			font-size: 20px;
+		}
+		.lablec{
+			font-family: Arial;
+			font-size: 20px;
+			bottom: 0;
+		}
+		.videomeret{
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-width: 100%;
+		}
+		a {
+			color: white;
+			text-decoration:none;
+		}
+		.gomb{
+			font-size: 16px;
+			font-family: Arial;
+			background-color: rgba(0, 0, 0, 0.7);
+			padding: 10px;
+			width: 150px;
+			display: inline-block;
+		}
+		.gomb:hover{
+			background-color: grey;
+			filter: invert(100%);
+			transition-duration: 2s;
+		}
+@media(max-width: 760px){
+		.gomb {
+		background-color: blue;
+		}
+		.hideonmobile{
+			display: none;
+		}
+	}
+@media(max-width: 450px){
+		.fejlec{
+		display: none;
+		}
+}
+	</style>
+	</head>
+ <body class="hatter">
+
+
+<div class="fejlec viszkozepre">
+	<a href="http://google.hu">Google</a>
+	<a href="http://nasa.com">NASA</a>
+	<a href="http://iwf.net">IWF</a>
+</div>
+
+<div class="szovegkozepre tokkozepre">Géza kék az ég
+	<div>
+	<a class="gomb hideonmobile" href="http://google.hu">Google</a>
+	<a class="gomb" href="http://nasa.com">NASA</a>
+	<a class="gomb" href="http://iwf.net">IWF</a>
+	</div>
+</div>
+<div class="lablec viszkozepre"> &copy; AzÉnCégem 1998-<span id="year"></span> 
+</div> 
+<script> var d = new Date(); var n = d.getFullYear(); document.getElementById("year").innerHTML = n; </script>
+ </body>
+</html>
